@@ -5,7 +5,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "../../styles/Products.module.scss";
 import { useDispatch } from "react-redux";
-
+import AddShoppingCart from "@material-ui/icons/AddShoppingCart";
 const products = gql`
   query getProduct {
     products {
@@ -41,7 +41,9 @@ const Products = () => {
     <div className={styles.products}>
       <div className={styles.left}>
         <div className={styles.filterItem}>
-          <h2>Product Categories</h2>
+          <h4>
+            Product <br /> Categories
+          </h4>
         </div>
       </div>
       <div className={styles.right}>
@@ -49,28 +51,31 @@ const Products = () => {
           console.log(product.id);
           return (
             <>
-              <Link key={product.id} href={`/products/${product.id}`}>
-                <Image
-                  className={styles.catImg}
-                  src={getImageURL(
-                    product.attributes.image.data.attributes.url
-                  )}
-                  width={300}
-                  height={200}
-                  alt=""
-                />
-                <div className={styles.title}>
-                  <h2>{product.attributes.name}</h2>
-                </div>
-                <div className={styles.price}>{product.attributes.price}</div>
-              </Link>
-              <button
-                onClick={() => {
-                  handleAddToCart(product);
-                }}
-              >
-                Add to cart
-              </button>
+              <div className={styles.render}>
+                <Link key={product.id} href={`/products/${product.id}`}>
+                  <Image
+                    className={styles.catImg}
+                    src={getImageURL(
+                      product.attributes.image.data.attributes.url
+                    )}
+                    width={200}
+                    height={200}
+                    alt=""
+                  />
+                  <div className={styles.title}>
+                    <h2>{product.attributes.name}</h2>
+                  </div>
+                  <div className={styles.price}>{product.attributes.price}</div>
+                </Link>
+                <button
+                  className="btn btn-success"
+                  onClick={() => {
+                    handleAddToCart(product);
+                  }}
+                >
+                  <AddShoppingCart /> Add to cart
+                </button>
+              </div>
             </>
           );
         })}

@@ -1,5 +1,3 @@
-import { gql, useQuery } from "@apollo/client";
-import product from "../back-end/src/api/product/controllers/product";
 
 const initialState = {
     products:[],
