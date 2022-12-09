@@ -7,6 +7,8 @@ import FavoriteBorderOutlined from "@material-ui/icons/FavoriteBorderOutlined";
 import styles from "../styles/Navbar.module.scss";
 // import Button from "@material-ui/core/Button";
 import { Button } from "reactstrap";
+import AddShoppingCart from "@material-ui/icons/AddShoppingCart";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -25,10 +27,6 @@ const Navbar = () => {
     <div className={styles.navbar}>
       <div className={styles.wrapper}>
         <div className={styles.left}>
-          <div className={styles.item}>
-            <span>USD</span>
-            <KeyboardArrowDown />
-          </div>
           <div className={styles.dropdown}>
             <div className={styles.dropdownContainer} ref={dropdownRef}>
               <Button onClick={(e) => handleDropDownFocus(open)}>Admin</Button>
@@ -53,7 +51,6 @@ const Navbar = () => {
             <Link className={styles.link} href="/">
               Men
             </Link>
-            <Link href="/card">card</Link>
           </div>
           <div className={styles.item}>
             <Link className={styles.link} href="/">
@@ -63,7 +60,7 @@ const Navbar = () => {
         </div>
         <div className={styles.center}>
           <Link className={styles.link} href="/">
-            SON STORE
+            ZENS STORE
           </Link>
         </div>
         <div className={styles.right}>
@@ -87,6 +84,11 @@ const Navbar = () => {
               Stores
             </Link>
           </div>
+          <Link href="/card">
+            <div className="btn btn-warning">
+              <AddShoppingCart /> Card
+            </div>
+          </Link>
           <div className={styles.icons}>
             <Search />
             <PersonOutlineOutlined />

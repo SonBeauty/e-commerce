@@ -1,5 +1,9 @@
 .navbar {
     height: 80px;
+    a{
+      text-decoration: none;
+      color: #000000;
+    }
   
     .wrapper {
       padding: 10px 30px;
@@ -21,6 +25,8 @@
       .center {
         font-size: 30px;
         letter-spacing: 2px;
+        font-weight: 800;
+        color: #2879fe;
       }
       .right {
         display: flex;

@@ -1,12 +1,17 @@
 .products {
     padding: 30px 50px;
     display: flex;
-  
+    margin-top: 50px;
+    margin-left: 50px;
+    a{
+      text-decoration: none;
+      color: #000;
+    }
     .left {
-      flex: 1;
       position: sticky;
       height: 100%;
       top: 50px;
+      margin-right: 50px;
   
       .filterItem{
         margin-bottom: 30px;
@@ -29,12 +34,16 @@
       flex: 3;
       display: flex;
       flex-wrap: wrap;
+
+      .render{
+        margin: 20px;
+      }
   
       .catImg{
-        width: 100%;
+        width: 300px;
         height: 150px;
-        object-fit: cover;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        object-fit: fill;
         padding-right: 50px;
       }
     }

@@ -77,8 +77,8 @@ const Shop = () => {
               src={getImageURL(
                 data?.shop.data.attributes.image.data.attributes.url
               )}
-              width={400}
-              height={400}
+              width={800}
+              height={800}
               alt=""
             />
 
@@ -91,7 +91,9 @@ const Shop = () => {
       <div className={styles.products}>
         <div className={styles.left}>
           <div className={styles.filterItem}>
-            <h2>Product Categories</h2>
+            <h4>
+              Product <br /> Categories
+            </h4>
           </div>
         </div>
         <div className={styles.right}>

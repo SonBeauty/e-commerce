@@ -43,12 +43,12 @@ const NewProduct = () => {
   };
 
   return (
-    <div className="row mt-5">
-      <div className="col-md-4 card m-auto shadow-lg">
-        <form onSubmit={handleSubmit(handleChange)}>
+    <div className="container mt-5">
+      <div>
+        <form className="" onSubmit={handleSubmit(handleChange)}>
           <div className="car-body">
             <div>
-              <label className="underline" htmlFor="name">
+              <label className="form-group" htmlFor="name">
                 name
               </label>
               <input className="form-control" {...register("name")} />
@@ -65,8 +65,8 @@ const NewProduct = () => {
             </div>
           </div>
 
-          <div>
-            <input type="submit" />
+          <div className="mt-3">
+            <input type="submit" className="btn btn-success" />
           </div>
         </form>
       </div>

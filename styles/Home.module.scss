@@ -1,3 +1,42 @@
-.test{
-  color:aquamarine
+.shop {
+  padding: 30px 50px;
+  display: flex;
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+
+  .left {
+    position: sticky;
+    height: 100%;
+    top: 50px;
+
+    .filterItem{
+      margin-bottom: 30px;
+      margin-right: 20px;
+
+      h2{
+        font-weight: 400;
+        margin-bottom: 18px;
+      }
+
+      .inputItem{
+        margin-bottom: 10px;
+        label{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  
+  .right {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+
+    .catImg{
+      width: 70px;
+      height: 70px;
+    }
+  }
 }

@@ -5,6 +5,7 @@ import Footer from "../component/Footer";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { Provider } from "react-redux";
 import store from "../store";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const client = new ApolloClient({
