@@ -1,0 +1,108 @@
+.navbar {
+    height: 80px;
+  
+    .wrapper {
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .item {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+      }
+  
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+      .center {
+        font-size: 30px;
+        letter-spacing: 2px;
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+  
+        .icons {
+          display: flex;
+          gap: 15px;
+          color: #777;
+          cursor: pointer;
+  
+          .cartIcon {
+            position: relative;
+  
+            span {
+              font-size: 12px;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background-color: #2879fe;
+              color: white;
+              position: absolute;
+              right: -10px;
+              top: -10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    z-index: 10;
+  }
+  .dropdownContainer {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .dropdownContainer button {
+    padding: 15px 20px;
+    box-shadow: 0 0 25px -20px #dbdbdb;
+    flex: 1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: .3px solid #919191;
+  }
+  
+  .dropdownContainer ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: calc(100% + 5px);
+    min-width: 100%;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    /* padding: 10px; */
+    border-radius: 4px;
+    box-shadow: 0 0 5px #d4d4d4;
+    list-style: none;
+  }
+  
+  .dropdownContainer ul li{
+    background-color: #fcfcfc;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color ease .2s;
+  }
+  .dropdownContainer ul li:hover{
+    background-color: #000000;
+    color: #fcfcfc;
+  }

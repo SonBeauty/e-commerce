@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "shops",
+  "collectionName": "products",
   "info": {
-    "singularName": "shop",
-    "pluralName": "shops",
-    "displayName": "shop",
-    "description": ""
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product"
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +13,9 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "price": {
+      "type": "integer"
     },
     "image": {
       "allowedTypes": [
@@ -25,11 +27,11 @@
       "type": "media",
       "multiple": false
     },
-    "products": {
+    "shop": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product",
-      "mappedBy": "shop"
+      "relation": "manyToOne",
+      "target": "api::shop.shop",
+      "inversedBy": "products"
     }
   }
 }
